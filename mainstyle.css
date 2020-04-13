@@ -1,0 +1,214 @@
+/* HEADER */
+* {
+    box-sizing: border-box;
+}
+/* Сетка одна полоса = 160px*/
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+.fon {
+    margin: -9px auto 0px;
+    background-color: #BFBBB0; 
+    padding: 30px 30px 30px 20px;
+    top: -9px;
+} 
+.nav a, .nav {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    color:#0F2605	;
+    font-family: "Lucida Sans", sans-serif;
+    font-size: larger;
+    text-decoration: none;
+}
+.menu_img {
+    display: inline-block;
+    position: relative; 
+    margin: -9px;
+    padding: 10px;
+}
+.menu_img:hover {
+    border: 1px solid  #f9f9f9;
+    box-shadow: 0px 2px 6px 0px  #f9f9f9;
+}
+.dropdown {
+    display: inline-block;
+    position: relative;
+    margin: -20px;
+    padding: 20px;
+    z-index: 2;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 20px 16px 0px rgba(0,0,0,0.2);
+    margin-right: 20px;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content  {
+    display: block;
+    color: white;
+}
+.dropdown:hover  {
+    border: 1px solid  #f9f9f9;
+    background: linear-gradient(to top, #0676A1, #FFC173);
+    box-shadow: 0px 2px 6px 0px  #f9f9f9;
+}
+/* BODY*/
+.main-content {
+    position: relative;
+    z-index: 1;
+}
+.mir {
+    margin: 0 auto;
+    display: none;
+}
+.mir h1 {
+    display:inline-block;
+    position:absolute;
+    top:80%;
+    left:15%;
+}
+.prev, .next, .prev2, .next2, .prev3, .next3, .prev4, .next4 {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin: -20px 0px ;
+    padding: 30px 17px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+.next {
+    right: 8.5%;
+    border-radius: 3px 0 0 3px;  
+}
+.prev {
+    left: 8.5%;
+}
+.prev:hover, .next:hover, .prev2:hover, .next2:hover, .prev3:hover, .next3:hover, .prev4:hover, .next4:hover  {
+    background-color: rgba(0,0,0,0.8);
+}
+.numbertext, .numbertext2, .numbertext3, .numbertext4 {
+    color: #f2f2f2;
+    font-size: 17px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 1%;
+}
+.dot, .dot2, .dot3, .dot4 {
+    cursor: pointer;
+    position: relative;
+    height: 15px;
+    width: 15px;
+    margin: 0px 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    bottom: 55px;
+}
+.active, .dot:hover, .dot2:hover, .dot3:hover, .dot4:hover {
+    background-color: #717171;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+.sredne h1 {
+    display:inline-block;
+    position:absolute;
+    top:80%;
+    left:10%; 
+}
+.polosa {
+    position: relative;
+    margin: 0 auto;
+    bottom:41px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.sredne { 
+    position: relative;
+    display: none;  
+}
+.next2 {
+    right: 50%;
+    border-radius: 3px 0 0 3px;  
+}
+.prev2 {
+    left: 0%;
+}
+.vosro {
+    display: none;  
+}
+.vosro h1 { 
+    display:inline-block;
+    position:absolute;
+    top:75%;
+    left:55%;  
+}
+.next3 {
+    right: 0%;
+    border-radius: 3px 0 0 3px;  
+}
+.prev3 {
+    left: 50%;
+}
+.posl {
+    position: relative;
+    margin: 0 auto;
+    bottom:82px;
+}
+.sovr {
+    display: none;
+    position: relative;  
+}
+.sovr h1 {
+    display:inline-block;
+    position:absolute;
+    top:80%;
+    left:9%;  
+}
+.next4 {
+    right: 0%;
+    border-radius: 3px 0 0 3px;
+}
